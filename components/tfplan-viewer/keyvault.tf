@@ -1,7 +1,7 @@
 module "keyvault" {
   source                  = "git::https://github.com/hmcts/cnp-module-key-vault?ref=master"
   name                    = "${var.component}-${var.env}-kv"
-  product                 = var.product
+  product                 = var.component
   env                     = var.env
   resource_group_name     = azurerm_resource_group.rg.name
   product_group_name      = "DTS Platform Operations"
