@@ -1,7 +1,7 @@
 variable "env" {}
 
 variable "product" {
-  default = "tfplan"
+  default = "cft-platform"
 }
 
 variable "component" {
