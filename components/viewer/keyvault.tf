@@ -8,5 +8,5 @@ module "keyvault" {
   common_tags                 = module.ctags.common_tags
   create_managed_identity     = false
   object_id                   = data.azurerm_client_config.current.object_id
-  managed_identity_object_ids = [azurerm_managed_identity.managed_identity.principal_id]
+  managed_identity_object_ids = [azurerm_user_assigned_identity.managed_identity.principal_id]
 }
