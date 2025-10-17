@@ -1,4 +1,9 @@
 variable "env" {}
+
+variable "product" {
+  default = "tfplan"
+}
+
 variable "component" {
   default = "tfplan-viewer"
 }
