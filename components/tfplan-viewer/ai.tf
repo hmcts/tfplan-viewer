@@ -7,5 +7,5 @@ module "ai" {
   product                       = var.component
   component                     = var.component
   key_vault_id                  = module.keyvault.key_vault_id
-  storage_account_name_override = "${replace(var.component, "-", "")}ai${var.env}sa"
+  storage_account_name_override = "${replace(var.component, "-", "")}${var.env}aisa"
 }
