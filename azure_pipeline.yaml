@@ -25,7 +25,7 @@ variables:
   - name: businessArea
     value: cft
   - name: product
-    value: tfplan
+    value: cft-platform
   - name: component
     value: viewer
   - name: terraformInitSubscription
