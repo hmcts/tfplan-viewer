@@ -1,12 +1,8 @@
 variable "env" {}
 
-variable "product" {
-  default = "tfplan"
-}
+variable "product" {}
 
-variable "component" {
-  default = "viewer"
-}
+variable "component" {}
 
 variable "location" {
   default = "uksouth"
