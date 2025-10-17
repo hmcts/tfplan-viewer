@@ -13,7 +13,7 @@ module "keyvault" {
 resource "azurerm_key_vault_access_policy" "aks_access_policy" {
   key_vault_id = module.keyvault.key_vault_id
 
-  object_id = azurerm_user_assigned_identity.managed_identity.principal_id
+  object_id = data.azurerm_client_config.current.client_id
   tenant_id = data.azurerm_client_config.current.tenant_id
 
   certificate_permissions = []
