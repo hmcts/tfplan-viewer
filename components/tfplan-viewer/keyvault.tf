@@ -34,13 +34,13 @@ resource "azurerm_key_vault_secret" "storage_account_primary_key" {
 
 resource "azurerm_key_vault_secret" "cognitive_account_primary_access_key" {
   name         = "cognitive-account-primary-access-key"
-  value        = module.ai.cognitive_account_primary_access_key
+  value        = module.ai.cognitive_account_primary_access_key[0]
   key_vault_id = module.keyvault.key_vault_id
 }
 
 resource "azurerm_key_vault_secret" "cognitive_account_endpoint" {
   name         = "storage-account-primary-key"
-  value        = module.ai.cognitive_account_endpoint
+  value        = module.ai.cognitive_account_endpoint[0]
   key_vault_id = module.keyvault.key_vault_id
 }
 
