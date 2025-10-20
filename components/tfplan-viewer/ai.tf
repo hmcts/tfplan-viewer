@@ -11,5 +11,5 @@ module "ai" {
   create_cognitive_account      = true
   cognitive_account_kind        = "OpenAI"
   cognitive_account_sku         = "S0"
-  cognitive_deployments         = var.cognitive_deployment
+  cognitive_deployments         = var.cognitive_deployments
 }
