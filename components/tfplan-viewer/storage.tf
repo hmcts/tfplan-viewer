@@ -15,11 +15,11 @@ module "storage" {
 
   containers = [{
     name        = "plan-html"
-    access_type = "container"
+    access_type = "private"
     },
     {
       name        = "plan-txt"
-      access_type = "container"
+      access_type = "private"
     }
   ]
 
