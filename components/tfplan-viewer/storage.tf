@@ -1,5 +1,5 @@
 module "storage" {
-  source                   = "git::https://github.com/hmcts/cnp-module-storage-account?ref=4.x"
+  source                   = "git::https://github.com/hmcts/cnp-module-storage-account?ref=switch-storage-id"
   env                      = var.env
   storage_account_name     = "${replace(var.component, "-", "")}sa"
   resource_group_name      = azurerm_resource_group.rg.name
