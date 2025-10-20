@@ -8,4 +8,8 @@ module "ai" {
   component                     = var.component
   key_vault_id                  = module.keyvault.key_vault_id
   storage_account_name_override = "${replace(var.component, "-", "")}${var.env}aisa"
+  create_cognitive_account      = true
+  cognitive_account_kind        = "OpenAI"
+  cognitive_account_sku         = "S0"
+  cognitive_deployment          = var.cognitive_deployments
 }
