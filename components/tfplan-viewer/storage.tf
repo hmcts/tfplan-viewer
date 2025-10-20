@@ -13,10 +13,6 @@ module "storage" {
     "Storage Blob Data Contributor"
   ]
 
-  sa_subnets = [
-    data.azurerm_subnet.sa_subnet.id
-  ]
-
   containers = [{
     name        = "plan-html"
     access_type = "container"
