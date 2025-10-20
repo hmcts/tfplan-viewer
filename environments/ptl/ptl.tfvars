@@ -1,5 +1,5 @@
 env = "ptl"
 
 cognitive_deployment = {
-  "tfplan-viewer-ptl-deployment" = {}
+  tfplan-viewer-ptl-deployment = {}
 }
