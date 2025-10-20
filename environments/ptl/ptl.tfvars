@@ -1,5 +1,5 @@
 env = "ptl"
 
-cognitive_deployment = {
+cognitive_deployments = {
   tfplan-viewer-ptl-deployment = {}
 }
