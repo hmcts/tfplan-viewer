@@ -18,7 +18,7 @@ module "storage" {
     access_type = "private"
     },
     {
-      name        = "plan-txt"
+      name        = "plan-json"
       access_type = "private"
     }
   ]
