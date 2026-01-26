@@ -48,6 +48,12 @@ jobs:
           az acr login --name hmctsprod
 
       # HMCTSPROD ACR
+      - name: 'Build and push PR image to HMCTSPROD'
+        if: github.event_name == 'pull_request'
+        run: |
+          docker build . -t hmctsprod.azurecr.io/rpe/tfplan-viewer:pr-${{github.event.number}}-${{ steps.prep.outputs.BUILD_ID }}
+          docker push hmctsprod.azurecr.io/rpe/tfplan-viewer:pr-${{github.event.number}}-${{ steps.prep.outputs.BUILD_ID }}
+
       - name: 'Build and push prod image to HMCTSPROD'
         if: github.ref == 'refs/heads/main'
         run: |
