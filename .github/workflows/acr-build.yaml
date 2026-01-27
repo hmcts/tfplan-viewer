@@ -5,6 +5,15 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'acr-build/**'
+      - '.github/workflows/acr-build.yaml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'acr-build/**'
+      - '.github/workflows/acr-build.yaml'
 
 jobs:
   main:
