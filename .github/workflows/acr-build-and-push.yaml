@@ -48,7 +48,7 @@ jobs:
 
       - name: 'Build and Push prod image - ${{ env.NEW_AZURE_CONTAINER_REGISTRY_URL }}'
         if: github.ref == 'refs/heads/main'
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           push: true
           platforms: linux/amd64,linux/arm64
@@ -65,7 +65,7 @@ jobs:
 
       - name: 'Build and Push prod image - ${{ env.AZURE_CONTAINER_REGISTRY_URL }}'
         if: github.ref == 'refs/heads/main'
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           push: true
           platforms: linux/amd64,linux/arm64
