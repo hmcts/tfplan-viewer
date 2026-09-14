@@ -1,5 +1,5 @@
 module "keyvault" {
-  source                  = "git::https://github.com/hmcts/cnp-module-key-vault?ref=DTSPO-34656/ado-compatibility"
+  source                  = "git::https://github.com/hmcts/cnp-module-key-vault?ref=DTSPO-31965/remove-jenkins-ptl-access"
   name                    = "${var.component}-${var.env}-kv"
   product                 = var.component
   env                     = var.env
