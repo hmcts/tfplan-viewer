@@ -6,7 +6,8 @@ module "storage" {
   location                 = var.location
   account_kind             = var.account_kind
   account_replication_type = var.account_replication_type
-  default_action           = "Allow"
+  default_action           = "Deny"
+  sa_subnets               = [data.azurerm_subnet.sa_subnet.id]
 
   managed_identity_object_id = data.azurerm_client_config.current.object_id
   role_assignments = [

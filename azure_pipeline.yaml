@@ -19,7 +19,7 @@ variables:
   - name: timeoutInMinutes
     value: 60
   - name: agentPool
-    value: 'ubuntu-latest'
+    value: 'hmcts-cftptl-agent-pool'
   - name: build
     value: $(Build.BuildNumber)
   - name: businessArea
@@ -56,7 +56,7 @@ stages:
     jobs:
       - job:
         pool:
-          vmImage: ${{ variables.agentPool }}
+          name: ${{ variables.agentPool }}
         timeoutInMinutes: ${{ variables.timeoutInMinutes }}
         steps:
           - template: steps/terraform-precheck.yaml@cnp-azuredevops-libraries
@@ -73,7 +73,7 @@ stages:
       jobs:
         - job: TerraformPlanApply
           pool:
-            vmImage: ${{ variables.agentPool }}
+            name: ${{ variables.agentPool }}
           timeoutInMinutes: ${{ variables.timeoutInMinutes }}
           steps:
           - template: steps/terraform.yaml@cnp-azuredevops-libraries
